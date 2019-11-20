@@ -50,6 +50,7 @@ public class Ennemi {
 	
 	public String toString() {
 		String status = "";
+		
 		status = estVivant() ? "il est vivant" : "il est mort" ; 
 		
     	return "Résumer d'ennemi "+this.type + "\r Point de vie: "+this.pv+"\r La vitesse: "+this.speed+"\r La position X: "+this.posx+"\r La position Y: "+this.posy+"\r Status: "+status+"\n";
@@ -63,7 +64,7 @@ public class Ennemi {
 		unEnnemi.type = sc.nextLine();
 		System.out.println("Donner les points de vie: ");
 		int pointsDeVie = sc.nextInt();
-		unEnnemi.pv = pointsDeVie;
+		unEnnemi.pv = pointsDeVie > 1000 || pointsDeVie < 0 ? 100:pointsDeVie;
 		System.out.println("Donner la vitesse: ");
 		int vitesse = sc.nextInt();
 		unEnnemi.speed = vitesse;
@@ -104,7 +105,8 @@ public class Ennemi {
    
     
     public void setPv(int nouvelleValeur) {
-    	this.pv = nouvelleValeur;
+    	this.pv = nouvelleValeur > 1000 || nouvelleValeur < 0 ? 100:nouvelleValeur;
+
     	
     }
     
