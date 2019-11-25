@@ -50,11 +50,8 @@ public class Ennemi {
 	
 	public String toString() {
 		String status = "";
-		
 		status = estVivant() ? "il est vivant" : "il est mort" ; 
-		
-    	return "Résumer d'ennemi "+this.type + "\r Point de vie: "+this.pv+"\r La vitesse: "+this.speed+"\r La position X: "+this.posx+"\r La position Y: "+this.posy+"\r Status: "+status+"\n";
-	    	
+    	return "Résumer d'ennemi "+this.type + "\r Point de vie: "+this.pv+"\r La vitesse: "+this.speed+"\r La position X: "+this.posx+"\r La position Y: "+this.posy+"\r Status: "+status+"\n";	
 	    }
 	
 	public static Ennemi saisirEnnemi() {
