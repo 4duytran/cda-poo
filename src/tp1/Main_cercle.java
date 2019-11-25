@@ -20,9 +20,7 @@ public class Main_cercle {
 		
 		//Exo2
 		
-		C_Cercle tab[] = new C_Cercle[2];
-		tab[0] = cercleA;
-		tab[1] = cercleB;
+		C_Cercle tab[] = {cercleA,cercleB};
 		
 		for(C_Cercle elt : tab) {
 			elt.affiche();;
@@ -38,28 +36,20 @@ public class Main_cercle {
 		
 		for (int i=0; i<(tableau.length); i++) 
 		{
-			
 			System.out.println("Cercle "+(i+1));
-			
-			System.out.println("Rayon?");
+			System.out.println("Rayon");
 			int rayon = sc.nextInt();
-			System.out.println("Abs?");
+			System.out.println("Abs");
 			int abs = sc.nextInt();
 			System.out.println("Ord");
 			int ord = sc.nextInt();
-			
+
 			C_Cercle cercle = new C_Cercle(abs, ord, rayon);
 			tableau[i]= cercle;
 			tableau[i].affiche();
 		}
 		
-		
-		
 		sc.close();
-		
-		
-		
-
 	}
 
 }
